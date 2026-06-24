@@ -1,0 +1,17 @@
+(defun read-number ()
+    (format t "Write a number: ")
+    (finish-output)
+    (parse-integer (read-line))
+)
+
+(defun read-and-sum (n)
+    (let ((total 0))    
+        (dotimes (i n total) 
+            (princ (concatenate 'string "Current Total: " (write-to-string total)) )(terpri)
+            (setf total (+ total (read-number)) )
+        )
+    )
+)
+
+(princ (concatenate 'string "Final Total: " (write-to-string(read-and-sum 5))     )   )
+(terpri)
