@@ -15,3 +15,4 @@
 
 (princ (concatenate 'string "Final Total: " (write-to-string(read-and-sum 5))     )   )
 (terpri)
+(princ "Added all numbers.")(terpri)
