@@ -13,6 +13,20 @@
     )
 )
 
-(princ (concatenate 'string "Final Total: " (write-to-string(read-and-sum 5))     )   )
+(princ (concatenate 'string "Final Total using dotimes: " (write-to-string(read-and-sum 5))     )   )
+(terpri)
+(princ "Added all numbers.")(terpri)
+
+
+(defun read-and-sum-two (n)
+    (let ((total 0))
+        (do ((i 0 (+ i 1))) ((= i n) total)
+            (princ (concatenate 'string "Current Total: " (write-to-string total)) )(terpri)
+            (setf total (+ total (read-number)))
+        )
+    )
+)
+
+(princ (concatenate 'string "Final Total using do: " (write-to-string(read-and-sum 5))     )   )
 (terpri)
 (princ "Added all numbers.")(terpri)
